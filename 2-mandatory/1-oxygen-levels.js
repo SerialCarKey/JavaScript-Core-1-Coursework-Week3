@@ -13,6 +13,15 @@
 
 function safeLevels() {}
 
+function safeLevels(oxygenLevels) {
+  for (let i = 0; i < oxygenLevels.length; i++ ) {
+    oxygenLevels[i] = oxygenLevels[i].substring(0, 4);
+    if (oxygenLevels[i] > 19.5 && oxygenLevels[i] < 23.5) {
+        return `${oxygenLevels[i]}%`;
+    }
+  }
+}
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
